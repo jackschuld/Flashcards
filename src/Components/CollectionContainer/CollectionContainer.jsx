@@ -1,17 +1,17 @@
 import React from 'react';
 import Collection from '../Collection/Collection';
 
-const CollectionContainer = ({ collections, getCollectionCards }) => {
+const CollectionContainer = ({ collections, setActiveCollection, setCards }) => {
     return ( 
         <div>
             <h4>Collections</h4>
-            <ul>
+            <nav>
                 {collections.map((collection) => {
                     return(
-                    <li><Collection collection={collection} getCollectionCards={getCollectionCards}/></li>
+                    <Collection collection={collection} setActiveCollection={setActiveCollection} setCards={setCards}/>
                     );
                 })}
-            </ul>
+            </nav>
         </div>
      );
 }

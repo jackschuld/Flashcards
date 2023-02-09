@@ -1,13 +1,21 @@
+import axios from 'axios';
 import React from 'react';
 
-const Collection = ({ collection, getCollectionCards }) => {
+const Collection = ({ collection, setActiveCollection, setCards }) => {
 
     function handleSubmit() {
-        getCollectionCards(collection.id)
+        setActiveCollection(collection);
+        getCollectionCards();
+    }
+
+    async function getCollectionCards() {
+        let url = "http://127.0.0.1:8000/api/collections/" + collection.id + "/cards/";
+        let response = await axios.get(url);
+        setCards(response.data);
     }
 
     return ( 
-        <button onClick={handleSubmit}>{collection.title}</button>
+        <div onClick={handleSubmit}>{collection.title}</div>
      );
 }
  
