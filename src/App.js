@@ -4,7 +4,7 @@ import Header from "./Components/Header/Header";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import CardContainer from "./Components/CardContainer/CardContainer";
 import AddCard from './Components/AddCard/AddCard';
-
+import './App.css'
 
 function App() {
 
