@@ -1,49 +1,55 @@
 import React, { useState } from 'react';
 import Card from '../Card/Card';
 
-const CardViewer = ({ cards }) => {
+const CardViewer = ({ cards, deleteCard, setCardNum, cardNum }) => {
 
     const [index, setIndex] = useState(0);
-    const [currentCard, setCurrentCard] = useState({});
-    let word = currentCard.word;
-    let definition = currentCard.definition;
-    
+    let currentCard = cards[index];
+    let cardsLength = cards.length;
 
     function drawCard() {
-        if (cards.length === 0) {
+        // Need Collection!
+        if (cardsLength === 0) {
             return alert('You must select a card Collection before starting!');
         }
-        if (index + 1 >= cards.length){
+
+        setIndex(index + 1);
+        setCardNum(cardNum + 1);
+    
+        if (index + 1 === cardsLength){
+            setCardNum(1);
             setIndex(0);
         }
-        else{
-            setIndex((index + 1));
-        }
-        console.log(index)
-        console.log(cards.length)
-        setCurrentCard(cards[index]);
-    }
+    };
 
     function prevCard() {
         // Base case - Making sure a card collection is selected
-        if (cards.length === 0) {
+        if (cardsLength === 0) {
             return alert('You must select a card Collection before starting!');
         }
-        if (index > 0){
+
+        if (cardNum > 1) {
             setIndex(index - 1);
+            setCardNum(cardNum - 1);
         }
         else {
-            setIndex(2);
+            setIndex(cardsLength - 1);
+            setCardNum(cardsLength);
         }
-        setCurrentCard(cards[index]);
-    }
+    };
 
+    function handleDelete() {
+        if (window.confirm('Are you sure you want to delete this card?')) {
+            deleteCard(currentCard.id);
+        }
+    };
 
     return (
         <div>
             <button onClick={drawCard}>Draw Card</button>
             <button onClick={prevCard}>Prev Card</button>
-            <Card word={word} definition={definition}/>
+            <Card card={currentCard} />
+            <button onClick={handleDelete}>Delete Card</button>
         </div>
      );
 }

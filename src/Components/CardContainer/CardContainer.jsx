@@ -1,12 +1,16 @@
 import React from 'react';
-
 import CardViewer from '../CardViewer/CardViewer';
 
-const CardContainer = ({ cards }) => {
+const CardContainer = ({ cards, deleteCard, cardNum, setCardNum }) => {
 
-    return ( 
-        <CardViewer cards={cards}/>
-     );
+    if (cardNum !== 0){
+        return (
+            <div>
+                <p>{cardNum} / {cards.length}</p>
+                <CardViewer cards={cards} deleteCard={deleteCard} cardNum={cardNum} setCardNum={setCardNum}/>
+            </div>
+        );
+    }
 }
  
 export default CardContainer;

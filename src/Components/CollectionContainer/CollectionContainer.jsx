@@ -1,14 +1,15 @@
 import React from 'react';
 import Collection from '../Collection/Collection';
 
-const CollectionContainer = ({ collections, setActiveCollection, setCards }) => {
+const CollectionContainer = ({ collections, setActiveCollection, setCards, setCardNum }) => {
     return ( 
-        <div>
-            <h4>Collections</h4>
+        <div className='row'>
             <nav>
                 {collections.map((collection) => {
                     return(
-                    <Collection collection={collection} setActiveCollection={setActiveCollection} setCards={setCards}/>
+                        <div className='col-md-3'>
+                            <Collection collection={collection} setActiveCollection={setActiveCollection} setCards={setCards} setCardNum={setCardNum}/>
+                        </div>
                     );
                 })}
             </nav>
