@@ -15,6 +15,8 @@ const AddCard = ({ activeCollection, addNewCard }) => {
         addNewCard(newCard);
     }
 
+
+    // Form that shows up after a collection is selected
     if (activeCollection.id){
         return ( 
             <form class="form-horizontal">
