@@ -1,4 +1,4 @@
-h4, .col-md-4 {
+h4, .col-md-4, button {
     display: flex;
     justify-content: center;
 }

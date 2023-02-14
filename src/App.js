@@ -52,7 +52,9 @@ function App() {
             <h4>Collections</h4>
           </div>
       </div>
-      <Sidebar collections={collections} setActiveCollection={setActiveCollection} setCards={setCards} setCardNum={setCardNum}/>
+      <div className='row'>
+        <Sidebar collections={collections} setActiveCollection={setActiveCollection} setCards={setCards} setCardNum={setCardNum}/>
+      </div>
       <div className='row'>
         <AddCard activeCollection={activeCollection} addNewCard={addNewCard}/>
       </div>
