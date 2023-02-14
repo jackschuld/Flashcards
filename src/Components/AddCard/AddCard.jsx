@@ -27,7 +27,8 @@ const AddCard = ({ activeCollection, addNewCard }) => {
                     <input type='text' id="inputDefinition" placeholder="Definition" value={definition} onChange={(event) => setDefinition(event.target.value)}/>
                 </div>
                 <div className='form-group'>
-                    <button onClick={handleNewCard} type="button">Add Card to Collection</button>
+                    <label for="submitNewCard" class="col-sm-2 control-label"/>
+                    <button onClick={handleNewCard} id="submitNewCard" class="btn btn-default" type="submit">Add Card</button>
                 </div>
             </form>
          );

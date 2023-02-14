@@ -1,4 +1,9 @@
-h4, .col-md-4, button {
+* {
+    padding-bottom: .5em;
+}
+
+
+h4, .col-md-4 {
     display: flex;
     justify-content: center;
 }
