@@ -31,3 +31,7 @@ form {
     padding-top: 10px;
     background-color: #165B98;
 }
+
+.form-group > label {
+    color: #FFF;
+}
