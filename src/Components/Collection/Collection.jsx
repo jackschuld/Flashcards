@@ -16,7 +16,7 @@ const Collection = ({ collection, setActiveCollection, setCards, setCardNum }) =
     }
 
     return ( 
-        <button type="button" class="btn btn-primary btn-lg active" onClick={handleSubmit}>{collection.title}</button>
+        <a href="#collections" class="btn btn-primary btn-lg active" role="button" onClick={handleSubmit}>{collection.title}</a>
      );
 }
  

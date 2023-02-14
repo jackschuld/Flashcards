@@ -7,7 +7,7 @@ const CollectionContainer = ({ collections, setActiveCollection, setCards, setCa
             <nav>
                 {collections.map((collection) => {
                     return(
-                        <div className='col-md-4'>
+                        <div className='col-md-4' id='collections'>
                             <Collection collection={collection} setActiveCollection={setActiveCollection} setCards={setCards} setCardNum={setCardNum}/>
                         </div>
                     );

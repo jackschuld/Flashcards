@@ -6,7 +6,9 @@ const CardContainer = ({ cards, deleteCard, cardNum, setCardNum }) => {
     if (cardNum !== 0){
         return (
             <div>
-                <p>{cardNum} / {cards.length}</p>
+                <div className='col-md-12'>
+                    <p>{cardNum} / {cards.length}</p>
+                </div>
                 <CardViewer cards={cards} deleteCard={deleteCard} cardNum={cardNum} setCardNum={setCardNum}/>
             </div>
         );
