@@ -45,11 +45,17 @@ const CardViewer = ({ cards, deleteCard, setCardNum, cardNum }) => {
     };
 
     return (
-        <div>
-            <button onClick={drawCard}>Draw Card</button>
-            <button onClick={prevCard}>Prev Card</button>
-            <Card card={currentCard} />
-            <button onClick={handleDelete}>Delete Card</button>
+        <div id="cards">
+            <div className='row'>
+                <div class='col-md-6'><a href="#cards" class="btn btn-primary btn-lg active" role="button" onClick={drawCard}>Draw Card</a></div>
+                <div class='col-md-6'><a href="#cards" class="btn btn-primary btn-lg active" role="button" onClick={prevCard}>Prev Card</a></div>
+            </div>
+            <div className='row'>
+                <Card card={currentCard} />
+            </div>
+            <div className='row'>
+                <a href="#cards" class="btn btn-primary btn-lg active" role="button" onClick={handleDelete}>Delete Card</a>
+            </div>
         </div>
      );
 }

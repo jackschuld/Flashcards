@@ -6,8 +6,18 @@
 
 h4, 
 .col-md-4,
-.col-md-12 > p {
+.col-md-12 > p,
+.row > a,
+.col-md-6 {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bolder;
+}
+
+.container-fluid {
     display: flex;
     justify-content: center;
-    font-weight: bolder;
+    align-items: center;
+    height: 10em;
+    padding: 0 15em;
 }
