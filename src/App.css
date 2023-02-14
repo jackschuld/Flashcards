@@ -20,14 +20,14 @@ h4,
     align-items: center;
     height: 20em;
     padding: 0 15em;
-    border: 2px solid #1867AB;
+    border: 2px solid #165B98;
 }
 
 h1 {
-    border-bottom: 2px solid #1867AB;
+    border-bottom: 2px solid #165B98;
 }
 
 form {
     padding-top: 10px;
-    background-color: #1867AB;
+    background-color: #165B98;
 }
